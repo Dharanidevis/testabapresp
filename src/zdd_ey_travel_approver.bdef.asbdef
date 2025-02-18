@@ -1,0 +1,43 @@
+projection;
+strict ( 2 );
+use draft;
+
+define behavior for ZDD_EY_TRAVEL_approver alias Travel
+{
+
+  use update;
+
+ field (readonly)
+ AgencyId, CustomerId,
+ BeginDate, EndDate, TotalPrice,
+ OverallStatus;
+
+  use action acceptTravel;
+  use action rejectTravel;
+
+  use action Prepare;
+  use action Edit;
+  use action Resume;
+  use action Activate;
+  use action Discard;
+
+  use association _Booking;
+}
+
+define behavior for ZDD_EY_BOOKING_approver alias Booking
+{
+//  use update;
+//  use delete;
+
+  use association _Travel;
+  use association _BookingSupplement;
+}
+
+define behavior for ZDD_EY_BOOKING_SUPPL_approver alias BookSuppl
+{
+//  use update;
+//  use delete;
+
+  use association _Travel;
+  use association _Booking;
+}

@@ -1,0 +1,6 @@
+@EndUserText.label: 'Unmanaged travel'
+define service ZDD_EY_SD_U_TRAVEL {
+  expose ZDD_EY_U_TRAVEL   as Travel;
+  expose ZDD_EY_U_CUSTOMER as Customer;
+  expose ZDD_EY_U_AGENCY   as Agency;
+}

@@ -1,0 +1,15 @@
+@EndUserText.label: 'Travel processor service definition'
+define service ZDD_EY_SD_TRAVEL_APPROVER {
+  expose ZDD_EY_TRAVEL_approver        as Travel;
+  expose ZDD_EY_BOOKING_approver       as Booking;
+  expose ZDD_EY_BOOKING_SUPPL_approver as BookSuppl;
+  expose /DMO/I_Agency                 as Agency;
+  expose /DMO/I_Customer               as Customer;
+  expose /DMO/I_Carrier                as Carrier;
+  expose /DMO/I_Connection             as Connection;
+  expose /DMO/I_Supplement             as Supplement;
+  expose I_Currency                    as Currency;
+  expose I_Country                     as Country;
+  expose /DMO/I_Overall_Status_VH      as TravelStatus;
+  expose /DMO/I_Booking_Status_VH      as BookingStatus;
+}
